@@ -25,13 +25,22 @@ namespace Aulas
 
             res = n1 + n2 + n3 + n4;
 
-            if (res >= 60)
-            {
-                resultado = "Aprovado";
-            }
-            else
-            {
-                resultado = "Reprovado";
+            if (res >= 60){
+                if (res >= 90){                
+                    resultado = "Aprovado com louvor";
+
+                }else{
+                    resultado = "Aprovado";
+
+                }
+            }else{
+
+                if (res >= 40)
+                {
+                    resultado = "Recurperação";
+                }else{
+                    resultado = "Reprovado";
+                }
             }
 
             //os índices dentro {} é a posição da concatenação
