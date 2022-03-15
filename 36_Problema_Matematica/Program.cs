@@ -15,37 +15,27 @@ namespace _36_Problema_Matematica {
             Console.WriteLine("Entre com as medidas do triângulo X");
 
             Console.WriteLine("\nDigite a primeira medida do triângulo X");
-            x.A = double.Parse(Console.ReadLine());
-
+            x.a = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a segunda medida do triângulo X");
-            x.B = double.Parse(Console.ReadLine());
-
+            x.b = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a terceira medida do triângulo X");
-            x.C = double.Parse(Console.ReadLine());
-
-            double xP = x.A + x.B + x.C / 2;
+            x.c = double.Parse(Console.ReadLine());           
 
             //Triângulo Y
             Console.WriteLine("\nEntre com as medidas do triângulo Y");
 
             Console.WriteLine("\nDigite a primeira medida do triângulo Y");
-            y.A = double.Parse(Console.ReadLine());
-
+            y.a = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a segunda medida do triângulo Y");
-            y.B = double.Parse(Console.ReadLine());
-
+            y.b = double.Parse(Console.ReadLine());
             Console.WriteLine("Digite a terceira medida do triângulo Y");
-            y.C = double.Parse(Console.ReadLine());
-           
-            double yP = (y.A + y.B + y.C) / 2;
+            y.c = double.Parse(Console.ReadLine());
 
-            //Raiz triangulo x
-            double areaX = Math.Round(Math.Sqrt(xP * (xP - x.A) * (xP - x.B) * (xP - x.C)), 2);
-            //Raiz triangulo y
-            double areaY = Math.Round(Math.Sqrt(yP * (yP - y.A) * (yP - y.B) * (yP - y.C)), 2);
+            double areaX = x.Area();
+            double areaY = y.Area();
 
             Console.WriteLine("\nÁrea do triângulo X: " + areaX);
-            Console.WriteLine("Área do triângulo Y: " + areaY);
+            Console.WriteLine("\nÁrea do triângulo Y: " + areaY);
 
             if (areaX > areaY) {
                 Console.WriteLine("\nA área do triângulo X é maior");
